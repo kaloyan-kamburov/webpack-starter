@@ -78,7 +78,7 @@ exports.extractCSS = ({ include, exclude, use }) => {
                     exclude,
                     use: plugin.extract({
                         use,
-                        fallback: 'style-loader'
+                        fallback: 'style-loader',
                     })
                 }
             ]
@@ -116,7 +116,9 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
                 exclude,
                 use: {
                     loader: 'url-loader',
-                    options
+                    options: {
+                        name: './fonts/[name].[ext]'
+                    }
                 }
             }
         ]
@@ -134,7 +136,9 @@ exports.loadFonts = ({ include, exclude, options } = {}) => ({
 
                 use: {
                     loader: 'file-loader',
-                    options,
+                    options: {
+                        name: './fonts/[name].[ext]'
+                    }
                 },
             },
         ],
