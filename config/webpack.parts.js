@@ -26,6 +26,22 @@ exports.devServer = ({ host, port } = {}) => ({
     }
 });
 
+exports.loadHTML = ({include, exclude, options} = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        include,
+        exclude,
+        use: {
+          loader: 'file-loader',
+          options
+        }
+      }
+    ]
+  }
+})
+
 exports.lintJavascript = ({ inluced, exluce, options }) => ({
     module: {
         rules: [

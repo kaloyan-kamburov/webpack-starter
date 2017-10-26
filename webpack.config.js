@@ -26,6 +26,7 @@ const commonConfig = merge([
 			})
 		]
 	},
+  parts.loadHTML({include: PATHS.app, options: { name: '[name].[ext]'}}),
 	parts.lintJavascript({ include: PATHS.app }),
 	parts.loadFonts({
 		options: {
@@ -42,5 +43,5 @@ module.exports = env => {
 	if (env === 'production') {
 		return merge(commonConfig, productionConfig);
 	}
-	return merge(commonConfig, developmentConfig); 
+	return merge(commonConfig, developmentConfig);
 };

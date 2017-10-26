@@ -13,6 +13,9 @@ export default (text = 'Hello World!') => {
   el.innerHTML = 'TEST';
   el.className = styles.test;
   element.appendChild(el);
-
+  const anchor = document.createElement('a');
+  anchor.href = './sidebar.html';
+  anchor.innerHTML = 'CLICK';
+  element.appendChild(anchor);
   return element;
 };
