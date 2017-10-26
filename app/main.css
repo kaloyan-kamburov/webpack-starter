@@ -1,0 +1,11 @@
+body {
+    background: pink;
+
+    background-image: url("./diagonal.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+.redButton {
+    background: red;
+}
