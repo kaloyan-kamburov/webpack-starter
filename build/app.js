@@ -77,30 +77,28 @@ module.exports = __webpack_require__.p + "./fonts/glyphicons-halflings-regular.e
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_font_awesome_css_font_awesome_css__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_font_awesome_css_font_awesome_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_font_awesome_css_font_awesome_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sidebar_html__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sidebar_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__sidebar_html__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_css__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__main_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__test_css__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__test_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__test_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_purecss__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_purecss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_purecss__);
 
 
+__webpack_require__(3);
 
+__webpack_require__(7);
 
+var _component = __webpack_require__(8);
 
+var _component2 = _interopRequireDefault(_component);
 
+__webpack_require__(15);
 
-document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_2__component__["a" /* default */])());
+__webpack_require__(0);
 
+__webpack_require__(16);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.body.appendChild((0, _component2.default)());
 
 /***/ }),
 /* 3 */
@@ -665,35 +663,45 @@ module.exports = __webpack_require__.p + "sidebar.html";
 
 /***/ }),
 /* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test_css__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__test_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__test_less__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__test_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__test_less__);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-/* harmony default export */ __webpack_exports__["a"] = ((text = 'Hello World!') => {
-  const element = document.createElement('div');
+var _test = __webpack_require__(0);
+
+var _test2 = _interopRequireDefault(_test);
+
+__webpack_require__(9);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Hello World!';
+
+  var element = document.createElement('div');
   element.id = 'div1';
-  element.className = __WEBPACK_IMPORTED_MODULE_0__test_css___default.a.eva;
+  element.className = _test2.default.eva;
 
-  element.innerHTML = text;
+  var x = 'ASD';
 
-  const el = document.createElement('div');
+  element.innerHTML = text + x;
+
+  var el = document.createElement('div');
   el.id = 'div2';
   el.innerHTML = 'TEST';
-  el.className = __WEBPACK_IMPORTED_MODULE_0__test_css___default.a.test;
+  el.className = _test2.default.test;
   element.appendChild(el);
-  const anchor = document.createElement('a');
+  var anchor = document.createElement('a');
   anchor.href = './sidebar.html';
   anchor.innerHTML = 'CLICK';
   element.appendChild(anchor);
   return element;
-});
-
+};
 
 /***/ }),
 /* 9 */

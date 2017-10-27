@@ -48,14 +48,31 @@ exports.lintJavascript = ({ inluced, exluce, options }) => ({
             {
                 test: /\.js$/,
                 enforce: 'pre',
-                loader: 'eslint-loader',
-                options: {
-                    emitWarning: true
+                use: {
+                  loader: 'eslint-loader',
+                  options
                 }
+
             }
         ]
     }
 });
+
+exports.loadJavaScript = ({ include, exclude, options }) => ({
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include,
+        exclude,
+        use: {
+          loader: 'babel-loader',
+          options
+        }
+      },
+    ],
+  },
+})
 
 exports.loadCSS = ({ include, exclude } = {}) => ({
     module: {

@@ -6,7 +6,9 @@ export default (text = 'Hello World!') => {
   element.id = 'div1';
   element.className = styles.eva;
 
-  element.innerHTML = text;
+  let x = 'ASD';
+
+  element.innerHTML = text + x;
 
   const el = document.createElement('div');
   el.id = 'div2';

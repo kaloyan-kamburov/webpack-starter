@@ -26,8 +26,9 @@ const commonConfig = merge([
 			})
 		]
 	},
+  parts.loadJavaScript({include: PATHS.app, exclude: /(node_modules|bower_components)/, options: { presets: ['env']}}),
   parts.loadHTML({include: PATHS.app, options: { name: '[name].[ext]'}}),
-	parts.lintJavascript({ include: PATHS.app }),
+	parts.lintJavascript({ include: PATHS.app, options: { emitWarning: true} }),
 	parts.loadFonts({
 		options: {
 			name: '[name].[ext]'
