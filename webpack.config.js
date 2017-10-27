@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const glob = require('glob');
 const merge = require('webpack-merge');
-const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const productionConfig = require('./config/webpack.production');
 const developmentConfig = require('./config/webpack.development');
@@ -22,7 +22,8 @@ const commonConfig = merge([
 			filename: "[name].js"
 		},
 		plugins: [
-		  new webpack.optimize.UglifyJsPlugin(),
+
+			new UglifyJsPlugin(),
 			new HtmlWebpackPlugin({
 				title: 'Webpack seed'
 			})
