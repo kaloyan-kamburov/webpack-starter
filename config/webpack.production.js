@@ -11,7 +11,7 @@ const productionConfig = merge([
 	parts.loadImages({
 		options: {
 			limit: 15000,
-			name: '[name].[ext]'
+			name: 'images/[name].[ext]'
 		}
 	})
 ]);

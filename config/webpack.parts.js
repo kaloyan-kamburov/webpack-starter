@@ -148,9 +148,9 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
                 include,
                 exclude,
                 use: {
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
-                        name: './fonts/[name].[ext]'
+                        name: './images/[name].[ext]'
                     }
                 }
             }
