@@ -9,11 +9,12 @@ const productionConfig = merge([
 		paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true })
 	}),
 	parts.loadImages({
-		options: {
-			limit: 15000,
-			name: 'images/[name].[ext]'
-		}
-	})
+    options: {
+      limit: 15000,
+      name: '[name].[ext]',
+      outputPath: 'images/',
+    }
+  })
 ]);
 
 module.exports = productionConfig;

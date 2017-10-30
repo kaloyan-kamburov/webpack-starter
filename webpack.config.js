@@ -1,8 +1,7 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const glob = require('glob');
 const merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWepbackPlugin = require('clean-webpack-plugin');
 
 const productionConfig = require('./config/webpack.production');
 const developmentConfig = require('./config/webpack.development');
@@ -23,10 +22,12 @@ const commonConfig = merge([
 		},
 		plugins: [
 
-			new UglifyJsPlugin(),
+			//new UglifyJsPlugin(),
 			new HtmlWebpackPlugin({
+        template: 'app/composed.html',
 				title: 'Webpack seed'
-			})
+			}),
+      new CleanWepbackPlugin(['build'])
 		]
 	},
   parts.loadJavaScript({include: PATHS.app, exclude: /(node_modules|bower_components)/, options: { presets: ['env']}}),
