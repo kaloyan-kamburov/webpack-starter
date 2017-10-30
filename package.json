@@ -2,17 +2,13 @@
   "name": "webpack-seed",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.js ",
   "scripts": {
     "start": "nodemon --watch *.* --exec \"webpack-dev-server --env development\"",
     "build": "webpack --env production",
     "lint:js": "eslint app/webpack.*.js --cache",
     "lint:style": "stylelint app/**/*.css",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/titanXL/webpack-seed.git"
   },
   "keywords": [],
   "author": "Emil Davidkov",
