@@ -169,7 +169,6 @@ exports.loadFonts = ({include, exclude, options} = {}) => ({
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            publicPath: 'fonts/',
             outputPath: 'fonts/'
           }
         }]
@@ -195,4 +194,20 @@ exports.loadLess = ({include, exclude, options} = {}) => ({
       }
     ]
   }
-})
+});
+
+exports.loadHBS = ({include, exclude, options} = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.hbs$/,
+        use: [
+          {
+            loader: "handlebars-template-loader",
+            options
+          }
+        ]
+      }
+    ]
+  }
+});

@@ -1,2 +1,2 @@
-import './composed.html';
+import './composed.hbs';
 import './test';
